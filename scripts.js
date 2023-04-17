@@ -5,6 +5,7 @@ let calculated = '1'
 // Only allowed to change below
 
 // arrow function containing 3 statements
+// this function adds 1 to the 'calculated' value so it will console.log '2', but first it converts it to a string number.
 const logCalc = () => {  // corrected format for arrow functions
     // creates new variable "isString" & checks whether 'calculated' is a string
     const isString = typeof calculated === 'string'; // changed to 'string because 'numerical-string' is not a valid value for the typeof operator
@@ -17,7 +18,7 @@ const logCalc = () => {  // corrected format for arrow functions
 console.log(`Calculated has been called ${logCalc()} times`);
 
 const calcUser = () => { // corrected format for arrow functions
-  const calculated = logCalc (); 
+  const calculated = logCalc (); //calls 'logCalc' to get a new value for 'calculated' & then updates the value of user and state based on the new value of calculated
   if (calculated > 2) user = 'John'
   if (calculated > 2) state = 'requesting'
   if (calculated > 3) state = 'idle'
